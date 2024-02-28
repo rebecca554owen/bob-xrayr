@@ -1,4 +1,4 @@
-FROM  alpine
+FROM  alpine:latest
 
 RUN apk --update --no-cache add wget unzip tzdata ca-certificates \
     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
