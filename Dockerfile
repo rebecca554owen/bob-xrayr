@@ -1,9 +1,9 @@
 FROM  alpine
 
-RUN  apk --update --no-cache add wget unzip tzdata ca-certificates \
+RUN apk --update --no-cache add wget unzip tzdata ca-certificates \
     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-    && mkdir /etc/XrayR/
-RUN wget -q -N --no-check-certificate -O /etc/XrayR/XrayR-linux.zip https://github.com/BobCoderS9/XrayR-release/releases/download/0.9.2/XrayR-linux-64.zip \
+    && mkdir /etc/XrayR/ \
+    && wget -q -N --no-check-certificate -O /etc/XrayR/XrayR-linux.zip https://github.com/BobCoderS9/XrayR-release/releases/download/0.9.2/XrayR-linux-64.zip \
     && unzip /etc/XrayR/XrayR-linux.zip -d /etc/XrayR/ \
     && rm /etc/XrayR/XrayR-linux.zip -f \
     && chmod +x /etc/XrayR/XrayR
