@@ -1,5 +1,5 @@
 FROM alpine:latest
-RUN RUN apk add --no-cache \
+RUN apk add --no-cache \
     unzip \
     && mkdir /etc/XrayR/ \
     && wget -q -N --no-check-certificate -O /etc/XrayR/XrayR-linux.zip https://github.com/BobCoderS9/XrayR-release/releases/download/0.9.2/XrayR-linux-64.zip
